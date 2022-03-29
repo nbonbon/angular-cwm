@@ -5,18 +5,22 @@ import { AppComponent } from './app.component';
 import { CoursesComponent } from './courses.component';
 import { CourseComponent } from './course/course.component';
 import { CoursesService } from './courses.service';
+import { AuthorsComponent } from './authors/authors.component';
+import { AuthorService } from './author.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     CoursesComponent,
-    CourseComponent
+    CourseComponent,
+    AuthorsComponent
   ],
   imports: [
     BrowserModule
   ],
   providers: [
-    CoursesService
+    CoursesService,
+    AuthorService
   ],
   bootstrap: [AppComponent]
 })
