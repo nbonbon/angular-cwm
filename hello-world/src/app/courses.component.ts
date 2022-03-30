@@ -15,6 +15,8 @@ import { CoursesService } from './courses.service';
         <button (click)="onSave($event)">EventBinding</button> 
         <input (keyup)="onKeyUp($event)" />
         <input (keyup.enter)="onKeyUpEventFiltering()" />
+        <input (keyup.enter)="templateVariables($event)" />
+        <input #email (keyup.enter)="templateVariablesAngularWay(email.value)" />
     `
 })
 export class CoursesComponent {
@@ -36,5 +38,14 @@ export class CoursesComponent {
 
     onKeyUpEventFiltering() {
         console.log("ENTER was pressed");
+    }
+
+    templateVariables($event: Event) {
+        const target = $event.target as HTMLTextAreaElement;
+        console.log(target.value);
+    }
+
+    templateVariablesAngularWay(value: string) {
+        console.log(value);
     }
 }
