@@ -10,13 +10,19 @@ import { CoursesService } from './courses.service';
                 {{ course }}
             </li>
         </ul> 
-        <button class="btn btn-primary" [class.active]="isActive">Save</button> 
-        <button [style.backgroundColor]="isActive ? 'blue' : 'white'">StyleBinding</button> 
-        <button (click)="onSave($event)">EventBinding</button> 
-        <input (keyup)="onKeyUp($event)" />
-        <input (keyup.enter)="onKeyUpEventFiltering()" />
-        <input (keyup.enter)="templateVariables($event)" />
-        <input #email (keyup.enter)="templateVariablesAngularWay(email.value)" />
+        <button class="btn btn-primary" [class.active]="isActive">Save</button> <br>
+        <button [style.backgroundColor]="isActive ? 'blue' : 'white'">StyleBinding</button> <br>
+        <button (click)="onSave($event)">EventBinding</button> <br>
+        <input (keyup)="onKeyUp($event)" /><br>
+        <input (keyup.enter)="onKeyUpEventFiltering()" /><br>
+        <input (keyup.enter)="templateVariables($event)" /><br>
+        <input #email (keyup.enter)="templateVariablesAngularWay(email.value)" /><br>
+        <input type="text" [(ngModel)]="name" (keyup.enter)="twoWayBinding()" /><br>
+        {{ course.title | uppercase | lowercase }} <br/>
+        {{ course.students | number }} <br/>
+        {{ course.rating | number:'1.2-2' }} <br/>
+        {{ course.price | currency:'AUD':true:'3.2-2' }} <br/>
+        {{ course.releaseDate | date:'shortDate' }} <br/>
     `
 })
 export class CoursesComponent {
@@ -45,7 +51,21 @@ export class CoursesComponent {
         console.log(target.value);
     }
 
+    email: string = "example@gmail.com";
     templateVariablesAngularWay(value: string) {
         console.log(value);
+    }
+    
+    name: string = "John Doe";
+    twoWayBinding() {
+        console.log(this.name);
+    }
+
+    course = {
+        title: "The Complete Angular Course",
+        rating: 4.9745,
+        students: 30123,
+        price: 190.95,
+        releaseDate: new Date(2016, 3, 1)
     }
 }
