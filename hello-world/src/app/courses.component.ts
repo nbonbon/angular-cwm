@@ -12,6 +12,7 @@ import { CoursesService } from './courses.service';
         </ul> 
         <button class="btn btn-primary" [class.active]="isActive">Save</button> 
         <button [style.backgroundColor]="isActive ? 'blue' : 'white'">StyleBinding</button> 
+        <button (click)="onSave($event)">EventBinding</button> 
     `
 })
 export class CoursesComponent {
@@ -21,5 +22,9 @@ export class CoursesComponent {
 
     constructor(service: CoursesService) {
         this.courses = service.getCourses();
+    }
+
+    onSave($event: Event) {
+        console.log("Button was clicked.", $event);
     }
 }
