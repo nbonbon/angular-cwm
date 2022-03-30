@@ -11,12 +11,13 @@ import { CoursesService } from './courses.service';
             </li>
         </ul> 
         <button class="btn btn-primary" [class.active]="isActive">Save</button> 
+        <button [style.backgroundColor]="isActive ? 'blue' : 'white'">StyleBinding</button> 
     `
 })
 export class CoursesComponent {
     title = "List of courses";
     courses;
-    isActive = false;
+    isActive = true;
 
     constructor(service: CoursesService) {
         this.courses = service.getCourses();
