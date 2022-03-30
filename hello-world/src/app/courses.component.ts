@@ -13,6 +13,8 @@ import { CoursesService } from './courses.service';
         <button class="btn btn-primary" [class.active]="isActive">Save</button> 
         <button [style.backgroundColor]="isActive ? 'blue' : 'white'">StyleBinding</button> 
         <button (click)="onSave($event)">EventBinding</button> 
+        <input (keyup)="onKeyUp($event)" />
+        <input (keyup.enter)="onKeyUpEventFiltering()" />
     `
 })
 export class CoursesComponent {
@@ -26,5 +28,13 @@ export class CoursesComponent {
 
     onSave($event: Event) {
         console.log("Button was clicked.", $event);
+    }
+
+    onKeyUp($event: KeyboardEvent) {
+        if($event.code === "Enter")  console.log("ENTER was pressed");
+    }
+
+    onKeyUpEventFiltering() {
+        console.log("ENTER was pressed");
     }
 }
