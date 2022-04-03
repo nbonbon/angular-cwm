@@ -10,6 +10,8 @@ import { AuthorService } from './author.service';
 import { FormsModule } from '@angular/forms';
 import { CustomPipeComponent } from './custom-pipe/custom-pipe.component';
 import { SummaryPipe } from './summary.pipe';
+import { FavoriteExerciseComponent } from './favorite-exercise/favorite-exercise.component';
+import { FavoriteComponent } from './favorite.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { SummaryPipe } from './summary.pipe';
     CourseComponent,
     AuthorsComponent,
     CustomPipeComponent,
-    SummaryPipe
+    SummaryPipe,
+    FavoriteExerciseComponent,
+    FavoriteComponent
   ],
   imports: [
     BrowserModule,
