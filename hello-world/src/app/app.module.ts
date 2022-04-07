@@ -12,6 +12,8 @@ import { CustomPipeComponent } from './custom-pipe/custom-pipe.component';
 import { SummaryPipe } from './summary.pipe';
 import { FavoriteExerciseComponent } from './favorite-exercise/favorite-exercise.component';
 import { FavoriteComponent } from './favorite.component';
+import { TitleCaseExerciseComponent } from './title-case-exercise/title-case-exercise.component';
+import { TitleCasePipe } from './title-case.pipe';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { FavoriteComponent } from './favorite.component';
     CustomPipeComponent,
     SummaryPipe,
     FavoriteExerciseComponent,
-    FavoriteComponent
+    FavoriteComponent,
+    TitleCaseExerciseComponent,
+    TitleCasePipe
   ],
   imports: [
     BrowserModule,
