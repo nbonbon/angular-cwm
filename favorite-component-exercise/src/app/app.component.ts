@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'favorite-component-exercise';
+  tweet = {
+    body: 'Here is the body of the tweet...',
+    isLiked: true,
+    likesCount: 10
+  }
 }
