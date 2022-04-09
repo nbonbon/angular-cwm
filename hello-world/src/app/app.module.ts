@@ -14,6 +14,7 @@ import { FavoriteExerciseComponent } from './favorite-exercise/favorite-exercise
 import { FavoriteComponent } from './favorite.component';
 import { TitleCaseExerciseComponent } from './title-case-exercise/title-case-exercise.component';
 import { TitleCasePipe } from './title-case.pipe';
+import { PanelComponent } from './panel/panel.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { TitleCasePipe } from './title-case.pipe';
     FavoriteExerciseComponent,
     FavoriteComponent,
     TitleCaseExerciseComponent,
-    TitleCasePipe
+    TitleCasePipe,
+    PanelComponent
   ],
   imports: [
     BrowserModule,
