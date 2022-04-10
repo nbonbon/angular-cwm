@@ -8,4 +8,6 @@ import { Component } from '@angular/core';
 export class AppComponent {
   courses: number[] = [1, 2];
   // courses: number[] = [];
+
+  viewMode = 'map';
 }
