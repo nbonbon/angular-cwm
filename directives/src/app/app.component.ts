@@ -16,4 +16,17 @@ export class AppComponent {
     { id: 2, name: 'class2' },
     { id: 3, name: 'class3' }
   ];
+
+  onAdd() {
+    this.classes.push({ id: 4, name: 'class4'});
+  }
+
+  onRemove(classs: any) {
+    let index = this.classes.indexOf(classs);
+    this.classes.splice(index, 1);
+  }
+
+  onChange(classs: any) {
+    classs.name = classs.name + " - UPDATED";
+  }
 }

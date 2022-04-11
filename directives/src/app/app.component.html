@@ -43,3 +43,13 @@
     {{ class.name }} <span *ngIf="isEven">(EVEN)</span>
   </li>
 </ul>
+
+<!-- ngFor and Change Detection -->
+<button (click)="onAdd()">Add</button>
+<ul>
+  <li *ngFor="let classs of classes">
+    {{ classs.name }}
+    <button (click)="onRemove(classs)">Remove</button>
+    <button (click)="onChange(classs)">Change</button>
+  </li>
+</ul>
