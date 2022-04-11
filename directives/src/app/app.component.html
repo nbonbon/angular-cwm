@@ -18,6 +18,7 @@
 </div>
 
 <!-- ngSwitchCase -->
+<h1>ngSwitchCase</h1>
 <ul class="nav nav-pills">
   <li [class.active]="viewMode == 'map'"><a (click)="viewMode = 'map'">Map View</a></li>
   <li [class.active]="viewMode == 'list'"><a (click)="viewMode = 'list'">List View</a></li>
@@ -27,3 +28,18 @@
   <div *ngSwitchCase="'list'">List View Content</div>
   <div *ngSwitchDefault>Otherwise</div>
 </div>
+
+<!-- ngFor -->
+<h1>ngFor</h1>
+<ul>
+  <li *ngFor="let class of classes; index as i">
+    {{ i }} - {{ class.name }}
+  </li>
+</ul>
+
+<!-- ngFor - even -->
+<ul>
+  <li *ngFor="let class of classes; even as isEven">
+    {{ class.name }} <span *ngIf="isEven">(EVEN)</span>
+  </li>
+</ul>

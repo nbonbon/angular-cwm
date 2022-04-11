@@ -10,4 +10,10 @@ export class AppComponent {
   // courses: number[] = [];
 
   viewMode = 'map';
+
+  classes = [
+    { id: 1, name: 'class1' },
+    { id: 2, name: 'class2' },
+    { id: 3, name: 'class3' }
+  ];
 }
