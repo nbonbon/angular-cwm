@@ -43,4 +43,9 @@ export class AppComponent {
   trackClass(index: number, classs: any) {
     return classs ? classs.id : undefined;
   }
+
+  isSelected: boolean = true;
+  onClickStar() {
+    this.isSelected = !this.isSelected;
+  }
 }

@@ -62,3 +62,15 @@
     {{ class.name }}
   </li>
 </ul>
+
+<!-- ngClass -->
+
+
+<h1>using ngClass</h1>
+<span
+  [ngClass]="{
+    'redStuff': isSelected,
+    'blueStuff': !isSelected
+  }"
+  (click)="onClickStar()"
+>Mickey Mouse</span>
