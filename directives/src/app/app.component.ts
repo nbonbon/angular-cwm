@@ -17,6 +17,8 @@ export class AppComponent {
     { id: 3, name: 'class3' }
   ];
 
+  classes_trackby: any[] = [];
+
   onAdd() {
     this.classes.push({ id: 4, name: 'class4'});
   }
@@ -28,5 +30,17 @@ export class AppComponent {
 
   onChange(classs: any) {
     classs.name = classs.name + " - UPDATED";
+  }
+
+  loadClasses() {
+    this.classes_trackby = [
+      { id: 1, name: 'class1' },
+      { id: 2, name: 'class2' },
+      { id: 3, name: 'class3' }
+    ];
+  }
+
+  trackClass(index: number, classs: any) {
+    return classs ? classs.id : undefined;
   }
 }

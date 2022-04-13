@@ -53,3 +53,12 @@
     <button (click)="onChange(classs)">Change</button>
   </li>
 </ul>
+
+<!-- ngFor and TrackBy -->
+<h1>ngFor and TrackBy</h1>
+<button (click)="loadClasses()">Load Courses</button>
+<ul>
+  <li *ngFor="let class of classes_trackby; trackBy: trackClass">
+    {{ class.name }}
+  </li>
+</ul>
