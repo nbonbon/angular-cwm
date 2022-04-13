@@ -48,4 +48,6 @@ export class AppComponent {
   onClickStar() {
     this.isSelected = !this.isSelected;
   }
+
+  canSave: boolean = true;
 }

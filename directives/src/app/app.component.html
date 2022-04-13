@@ -64,9 +64,15 @@
 </ul>
 
 <!-- ngClass -->
+<h1>ngClass</h1>
+<h2>not using ngClass</h2>
+<span
+  [class.redStuff]="isSelected"
+  [class.blueStuff]="!isSelected"
+  (click)="onClickStar()"
+>O-toodles</span>
 
-
-<h1>using ngClass</h1>
+<h2>using ngClass</h2>
 <span
   [ngClass]="{
     'redStuff': isSelected,
@@ -74,3 +80,21 @@
   }"
   (click)="onClickStar()"
 >Mickey Mouse</span>
+
+<!-- ngStyle -->
+<h1>ngStyle</h1>
+<h2>not using ngStyle</h2>
+<button
+  [style.backgroundColor]="canSave ? 'blue': 'gray'"
+  [style.color]="canSave ? 'white': 'black'"
+  [style.fontWeight]="canSave ? 'bold': 'normal'"
+>Save</button>
+
+<h2>using ngStyle</h2>
+<button
+  [ngStyle]="{
+    'backgroundColor': canSave ? 'blue': 'gray',
+    'color': canSave ? 'white': 'black',
+    'fontWeight': canSave ? 'bold': 'normal'
+  }"
+>Save</button>
