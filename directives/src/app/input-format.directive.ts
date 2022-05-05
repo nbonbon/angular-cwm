@@ -4,7 +4,7 @@ import { Directive, ElementRef, HostListener, Input } from '@angular/core';
   selector: '[appInputFormat]'
 })
 export class InputFormatDirective {
-  @Input('format') format: string = '';
+  @Input('appInputFormat') format: string = '';
   
   constructor(private el: ElementRef) { }
   
